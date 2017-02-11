@@ -55,10 +55,10 @@
         '<div id="' + id + '" class="article-share-box">',
           '<input class="article-share-input" value="' + url + '">',
           '<div class="article-share-links">',
-'<a href="http://service.weibo.com/share/share.php?appkey=1714312189&pic=http%3A%2F%2Fwww.devchen.com%2FSharePic.png&ralateUid=5596515742&searchPic=true&url=' + encodedUrl + '" class="article-share-sina" target="_blank" title="΢��"></a>',
-'<a href="http://share.renren.com/share/buttonshare.do?link=' + encodedUrl + '" class="article-share-renren" target="_blank" title="����"></a>',
-'<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-qq" target="_blank" title="QQ�ռ�"></a>',
-'<a href="http://qr.liantu.com/api.php?text=' + encodedUrl + '" class="article-share-wechat" target="_blank" title="΢��"></a>',
+            '<a href="http://service.weibo.com/share/share.php?appkey=1714312189&pic=http%3A%2F%2Fwww.devchen.com%2FSharePic.png&ralateUid=5596515742&searchPic=true&url=' + encodedUrl + '" class="article-share-sina" target="_blank" title="微博"></a>',
+'<a href="http://share.renren.com/share/buttonshare.do?link=' + encodedUrl + '" class="article-share-renren" target="_blank" title="人人"></a>',
+'<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-qq" target="_blank" title="QQ空间"></a>',
+'<a href="http://qr.liantu.com/api.php?text=' + encodedUrl + '" class="article-share-wechat" target="_blank" title="微信"></a>',
           '</div>',
         '</div>'
       ].join('');
