@@ -5,22 +5,16 @@
   
   <title>python列表添加字典需要注意地方 | AZ_Chen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象
-list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list输出结果：
-[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起">
+  <meta name="description" content="python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python列表添加字典需要注意地方">
 <meta property="og:url" content="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/index.html">
 <meta property="og:site_name" content="AZ_Chen's Blog">
-<meta property="og:description" content="##python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象
-list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list输出结果：
-[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起">
-<meta property="og:updated_time" content="2017-06-12T10:56:49.836Z">
+<meta property="og:description" content="python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象">
+<meta property="og:updated_time" content="2017-06-12T10:59:38.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python列表添加字典需要注意地方">
-<meta name="twitter:description" content="##python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象
-list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list输出结果：
-[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起">
+<meta name="twitter:description" content="python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象">
   
     <link rel="alternate" href="/atom.xml" title="AZ_Chen&#39;s Blog" type="application/atom+xml">
   
@@ -99,8 +93,7 @@ list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)pr
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##python列表添加变量的存储机制<br>在写软件工程课设的时候，发现了python列表存入字典的现象</p>
-<p><pre><code>list=[]<br>dict = {}<br>for i in range(0,3):<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>输出结果：</p>
+        <h2 id="python列表添加变量的存储机制"><a href="#python列表添加变量的存储机制" class="headerlink" title="python列表添加变量的存储机制"></a>python列表添加变量的存储机制</h2><p>在写软件工程课设的时候，发现了python列表存入字典的现象<br><a id="more"></a> <pre><code>list=[]<br>dict = {}<br>for i in range(0,3):<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>输出结果：</p>
 <p><pre><code>[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]<br></code></pre><br>这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起之前存储的字典的变化。想要避免这个情况，就需要每次再循环的时候都要重新定义字典。</p>
 <p><pre><code>list=[]<br>for i in range(0,3):<br>    dict = {}<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>输出结果：</p>
 <p><pre><code>[{‘a’: 0}, {‘a’: 1}, {‘a’: 2}]<br></code></pre><br>如果存入的不是字典而是普通变量就没有这种情况了。</p>

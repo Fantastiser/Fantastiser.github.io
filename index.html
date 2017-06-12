@@ -91,14 +91,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##python列表添加变量的存储机制<br>在写软件工程课设的时候，发现了python列表存入字典的现象</p>
-<p><pre><code>list=[]<br>dict = {}<br>for i in range(0,3):<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>输出结果：</p>
-<p><pre><code>[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]<br></code></pre><br>这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起之前存储的字典的变化。想要避免这个情况，就需要每次再循环的时候都要重新定义字典。</p>
-<p><pre><code>list=[]<br>for i in range(0,3):<br>    dict = {}<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>输出结果：</p>
-<p><pre><code>[{‘a’: 0}, {‘a’: 1}, {‘a’: 2}]<br></code></pre><br>如果存入的不是字典而是普通变量就没有这种情况了。</p>
-<p><pre><code>list=[]<br>a=0<br>for i in range(0,3):<br>    a=i<br>    list.append(a)<br>print list<br></code></pre><br>输出结果:</p>
-<p><pre><code>[0, 1, 2]<br></code></pre><br>这是因为a=i相当于每次都重新定义了变量，所以列表中存入的变量地址不同。</p>
-
+        <h2 id="python列表添加变量的存储机制"><a href="#python列表添加变量的存储机制" class="headerlink" title="python列表添加变量的存储机制"></a>python列表添加变量的存储机制</h2><p>在写软件工程课设的时候，发现了python列表存入字典的现象<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/06/12/python列表添加字典需要注意地方/#more">余下全文</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
