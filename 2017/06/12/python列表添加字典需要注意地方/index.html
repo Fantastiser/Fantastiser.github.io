@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python列表添加字典需要注意地方 | AZ_Chen&#39;s Blog</title>
+  <title>python�б������ֵ���Ҫע���ط� | AZ_Chen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象">
+  <meta name="description" content="����������������������������python�б������ֵ���Ҫע���ط���д�������̿�����ʱ�򣬷�����python�б������ֵ�������
+list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list����������
+[{‘a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python列表添加字典需要注意地方">
+<meta property="og:title" content="python�б������ֵ���Ҫע���ط�">
 <meta property="og:url" content="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/index.html">
 <meta property="og:site_name" content="AZ_Chen's Blog">
-<meta property="og:description" content="python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象">
-<meta property="og:updated_time" content="2017-06-12T10:59:38.838Z">
+<meta property="og:description" content="����������������������������python�б������ֵ���Ҫע���ط���д�������̿�����ʱ�򣬷�����python�б������ֵ�������
+list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list����������
+[{‘a">
+<meta property="og:updated_time" content="2017-06-12T11:02:44.275Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python列表添加字典需要注意地方">
-<meta name="twitter:description" content="python列表添加变量的存储机制在写软件工程课设的时候，发现了python列表存入字典的现象">
+<meta name="twitter:title" content="python�б������ֵ���Ҫע���ط�">
+<meta name="twitter:description" content="����������������������������python�б������ֵ���Ҫע���ط���д�������̿�����ʱ�򣬷�����python�б������ֵ�������
+list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list����������
+[{‘a">
   
     <link rel="alternate" href="/atom.xml" title="AZ_Chen&#39;s Blog" type="application/atom+xml">
   
@@ -74,7 +80,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/编程-技术/">编程&技术</a>
+    <a class="article-category-link" href="/categories/����-����/">����&����</a>
   </div>
 
   </div>
@@ -85,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python列表添加字典需要注意地方
+      python�б������ֵ���Ҫע���ط�
     </h1>
   
 
@@ -93,12 +99,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="python列表添加变量的存储机制"><a href="#python列表添加变量的存储机制" class="headerlink" title="python列表添加变量的存储机制"></a>python列表添加变量的存储机制</h2><p>在写软件工程课设的时候，发现了python列表存入字典的现象<br><a id="more"></a> <pre><code>list=[]<br>dict = {}<br>for i in range(0,3):<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>输出结果：</p>
-<p><pre><code>[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]<br></code></pre><br>这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起之前存储的字典的变化。想要避免这个情况，就需要每次再循环的时候都要重新定义字典。</p>
-<p><pre><code>list=[]<br>for i in range(0,3):<br>    dict = {}<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>输出结果：</p>
-<p><pre><code>[{‘a’: 0}, {‘a’: 1}, {‘a’: 2}]<br></code></pre><br>如果存入的不是字典而是普通变量就没有这种情况了。</p>
-<p><pre><code>list=[]<br>a=0<br>for i in range(0,3):<br>    a=i<br>    list.append(a)<br>print list<br></code></pre><br>输出结果:</p>
-<p><pre><code>[0, 1, 2]<br></code></pre><br>这是因为a=i相当于每次都重新定义了变量，所以列表中存入的变量地址不同。</p>
+        <h2 id="����������������������������python�б������ֵ���Ҫע���ط�"><a href="#����������������������������python�б������ֵ���Ҫע���ط�" class="headerlink" title="����������������������������python�б������ֵ���Ҫע���ط�"></a>����������������������������python�б������ֵ���Ҫע���ط�</h2><p>��д�������̿�����ʱ�򣬷�����python�б������ֵ�������</p>
+<p><pre><code>list=[]<br>dict = {}<br>for i in range(0,3):<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>����������</p>
+<p><pre><code>[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]<br></code></pre><br><a id="more"></a>����������Ϊ�б������ֵ������ֵ��ĵ�ַ��ÿ���޸��ֵ���ֵ�ͻ�����֮ǰ�洢���ֵ��ı仯����Ҫ������������������Ҫÿ����ѭ����ʱ����Ҫ���¶����ֵ䡣</p>
+<p><pre><code>list=[]<br>for i in range(0,3):<br>    dict = {}<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>����������</p>
+<p><pre><code>[{‘a’: 0}, {‘a’: 1}, {‘a’: 2}]<br></code></pre><br>���������Ĳ����ֵ�������ͨ������û�����������ˡ�</p>
+<p><pre><code>list=[]<br>a=0<br>for i in range(0,3):<br>    a=i<br>    list.append(a)<br>print list<br></code></pre><br>��������:</p>
+<p><pre><code>[0, 1, 2]<br></code></pre><br>������Ϊa=i�൱��ÿ�ζ����¶����˱����������б��д����ı�����ַ��ͬ��</p>
 
       
     </div>
@@ -128,7 +135,7 @@
 
 <section id="comments">
 <!-- 多说评论框 start -->
-	<div id="ds-thread" class="ds-thread" data-thread-key="2017/06/12/python列表添加字典需要注意地方/" data-title="python列表添加字典需要注意地方" data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/"></div>
+	<div id="ds-thread" class="ds-thread" data-thread-key="2017/06/12/python列表添加字典需要注意地方/" data-title="python�б������ֵ���Ҫע���ط�" data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/"></div>
 <!-- 多说评论框 end -->
 </section>
 </section>
@@ -139,7 +146,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/编程-技术/">编程&技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/����-����/">����&����</a></li></ul>
     </div>
   </div>
 
@@ -181,7 +188,7 @@
       <ul>
         
           <li>
-            <a href="/2017/06/12/python列表添加字典需要注意地方/">python列表添加字典需要注意地方</a>
+            <a href="/2017/06/12/python列表添加字典需要注意地方/">python�б������ֵ���Ҫע���ط�</a>
           </li>
         
           <li>
