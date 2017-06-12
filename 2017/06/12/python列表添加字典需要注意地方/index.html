@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 《老人与海》 | AZ_Chen&#39;s Blog</title>
+  <title>python�б������ֵ���Ҫע���ط� | AZ_Chen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AZ_Chen's Blog">
-<meta property="og:url" content="https://fantastiser.github.io/tags/《老人与海》/index.html">
+  <meta name="description" content="##python�б����ӱ����Ĵ洢������д�������̿�����ʱ�򣬷�����python�б������ֵ�������
+list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list����������
+[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]��">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python�б������ֵ���Ҫע���ط�">
+<meta property="og:url" content="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/index.html">
 <meta property="og:site_name" content="AZ_Chen's Blog">
+<meta property="og:description" content="##python�б����ӱ����Ĵ洢������д�������̿�����ʱ�򣬷�����python�б������ֵ�������
+list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list����������
+[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]��">
+<meta property="og:updated_time" content="2017-06-12T05:41:22.815Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AZ_Chen's Blog">
+<meta name="twitter:title" content="python�б������ֵ���Ҫע���ط�">
+<meta name="twitter:description" content="##python�б����ӱ����Ĵ洢������д�������̿�����ʱ�򣬷�����python�б������ֵ�������
+list=[]dict = {}for i in range(0,3):    dict[“a”] = i    list.append(dict)print list����������
+[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]��">
   
     <link rel="alternate" href="/atom.xml" title="AZ_Chen&#39;s Blog" type="application/atom+xml">
   
@@ -63,40 +73,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/02/12/读《老人与海》有感/" class="archive-article-date">
-  <time datetime="2017-02-12T01:46:49.000Z" itemprop="datePublished">2月 12</time>
+        <section id="main"><article id="post-python列表添加字典需要注意地方" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/12/python列表添加字典需要注意地方/" class="article-date">
+  <time datetime="2017-06-12T05:40:05.000Z" itemprop="datePublished">2017-06-12</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/����-����/">����&����</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/12/读《老人与海》有感/">找到了初中写的一篇文章</a>
+    <h1 class="article-title" itemprop="name">
+      python�б������ֵ���Ҫע���ط�
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##python�б����ӱ����Ĵ洢����<br>��д�������̿�����ʱ�򣬷�����python�б������ֵ�������</p>
+<p><pre><code>list=[]<br>dict = {}<br>for i in range(0,3):<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>����������</p>
+<p><pre><code>[{‘a’: 2}, {‘a’: 2}, {‘a’: 2}]<br></code></pre><br>������Ϊ�б������ֵ������ֵ��ĵ�ַ��ÿ���޸��ֵ���ֵ�ͻ�����֮ǰ�洢���ֵ��ı仯����Ҫ������������������Ҫÿ����ѭ����ʱ����Ҫ���¶����ֵ䡣</p>
+<p><pre><code>list=[]<br>for i in range(0,3):<br>    dict = {}<br>    dict[“a”] = i<br>    list.append(dict)<br>print list<br></code></pre><br>����������</p>
+<p><pre><code>[{‘a’: 0}, {‘a’: 1}, {‘a’: 2}]<br></code></pre><br>���������Ĳ����ֵ�������ͨ������û�����������ˡ�</p>
+<p><pre><code>list=[]<br>a=0<br>for i in range(0,3):<br>    a=i<br>    list.append(a)<br>print list<br></code></pre><br>��������:</p>
+<p><pre><code>[0, 1, 2]<br></code></pre><br>������Ϊa=i�൱��ÿ�ζ����¶����˱����������б��д����ı�����ַ��ͬ��</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/" data-id="cj3u0uw0s00003go0bi68gb6b" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/12/读《老人与海》有感/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">找到了初中写的一篇文章</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+<!-- 多说评论框 start -->
+	<div id="ds-thread" class="ds-thread" data-thread-key="2017/06/12/python列表添加字典需要注意地方/" data-title="python�б������ֵ���Ҫע���ط�" data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/"></div>
+<!-- 多说评论框 end -->
+</section>
 </section>
         
           <aside id="sidebar">
