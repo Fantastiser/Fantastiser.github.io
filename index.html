@@ -93,16 +93,15 @@
       
         <h2 id="python列表添加字典需要注意地方"><a href="#python列表添加字典需要注意地方" class="headerlink" title="　　　　　　　　　　　　　　python列表添加字典需要注意地方"></a>　　　　　　　　　　　　　　python列表添加字典需要注意地方</h2><p>在写软件工程课设的时候，发现了python列表存入字典的现象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list=[]</div><div class="line">dict = &#123;&#125;</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):</div><div class="line">    dict[<span class="string">"a"</span>] = i</div><div class="line">    list.append(dict)</div><div class="line"><span class="keyword">print</span> list</div></pre></td></tr></table></figure></p>
 <p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;]</div></pre></td></tr></table></figure></p>
-<p>这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起之前存储的字典的变化。想要避免这个情况，就需要每次再循环的时候都要重新定义字典。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list=[]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):</div><div class="line">    dict = &#123;&#125;</div><div class="line">    dict[<span class="string">"a"</span>] = i</div><div class="line">    list.append(dict)</div><div class="line"><span class="keyword">print</span> list</div></pre></td></tr></table></figure></p>
-<p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123;<span class="string">'a'</span>: <span class="number">0</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">1</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;]</div></pre></td></tr></table></figure></p>
-<p>如果存入的不是字典而是普通变量就没有这种情况了。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list=[]</div><div class="line">a=<span class="number">0</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):</div><div class="line">    a=i</div><div class="line">    list.append(a)</div><div class="line"><span class="keyword">print</span> list</div></pre></td></tr></table></figure></p>
-<p>输出结果:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]</div></pre></td></tr></table></figure></p>
-<p>这是因为a=i相当于每次都重新定义了变量，所以列表中存入的变量地址不同。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/06/12/python列表添加字典需要注意地方/#more">余下全文</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/" data-id="cj3u4lunv0000woo0dlz3dt40" class="article-share-link">分享</a>
+      <a data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/" data-id="cj4dyna270000aoo02esxvust" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -149,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fantastiser.github.io/2017/02/12/读《老人与海》有感/" data-id="cj3u4luo80004woo0yo3otcka" class="article-share-link">分享</a>
+      <a data-url="https://fantastiser.github.io/2017/02/12/读《老人与海》有感/" data-id="cj4dyna3a0004aoo0kx00ak8e" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/《老人与海》/">《老人与海》</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读后感/">读后感</a></li></ul>
@@ -192,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fantastiser.github.io/2017/02/11/第一篇文章/" data-id="cj3u4luo10001woo047mgpw9q" class="article-share-link">分享</a>
+      <a data-url="https://fantastiser.github.io/2017/02/11/第一篇文章/" data-id="cj4dyna2o0001aoo0hglmamd8" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>

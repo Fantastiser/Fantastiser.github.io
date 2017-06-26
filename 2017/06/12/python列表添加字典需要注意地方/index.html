@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="AZ_Chen's Blog">
 <meta property="og:description" content="python列表添加字典需要注意地方在写软件工程课设的时候，发现了python列表存入字典的现象123456list=[]dict = &amp;#123;&amp;#125;for i in range(0,3):    dict[&quot;a&quot;] = i    list.append(dict)print list
 输出结果：1[&amp;#123;&apos;a&apos;: 2&amp;#125;, &amp;#123;&apos;a&apos;:">
-<meta property="og:updated_time" content="2017-06-12T12:35:07.946Z">
+<meta property="og:updated_time" content="2017-06-26T09:43:59.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python列表添加字典需要注意地方">
 <meta name="twitter:description" content="python列表添加字典需要注意地方在写软件工程课设的时候，发现了python列表存入字典的现象123456list=[]dict = &amp;#123;&amp;#125;for i in range(0,3):    dict[&quot;a&quot;] = i    list.append(dict)print list
@@ -98,6 +98,7 @@
       
         <h2 id="python列表添加字典需要注意地方"><a href="#python列表添加字典需要注意地方" class="headerlink" title="　　　　　　　　　　　　　　python列表添加字典需要注意地方"></a>　　　　　　　　　　　　　　python列表添加字典需要注意地方</h2><p>在写软件工程课设的时候，发现了python列表存入字典的现象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list=[]</div><div class="line">dict = &#123;&#125;</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):</div><div class="line">    dict[<span class="string">"a"</span>] = i</div><div class="line">    list.append(dict)</div><div class="line"><span class="keyword">print</span> list</div></pre></td></tr></table></figure></p>
 <p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;]</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>这是因为列表存入字典的是字典的地址，每次修改字典的值就会引起之前存储的字典的变化。想要避免这个情况，就需要每次再循环的时候都要重新定义字典。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list=[]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):</div><div class="line">    dict = &#123;&#125;</div><div class="line">    dict[<span class="string">"a"</span>] = i</div><div class="line">    list.append(dict)</div><div class="line"><span class="keyword">print</span> list</div></pre></td></tr></table></figure></p>
 <p>输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123;<span class="string">'a'</span>: <span class="number">0</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">1</span>&#125;, &#123;<span class="string">'a'</span>: <span class="number">2</span>&#125;]</div></pre></td></tr></table></figure></p>
 <p>如果存入的不是字典而是普通变量就没有这种情况了。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list=[]</div><div class="line">a=<span class="number">0</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">3</span>):</div><div class="line">    a=i</div><div class="line">    list.append(a)</div><div class="line"><span class="keyword">print</span> list</div></pre></td></tr></table></figure></p>
@@ -107,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/" data-id="cj3u4lunv0000woo0dlz3dt40" class="article-share-link">分享</a>
+      <a data-url="https://fantastiser.github.io/2017/06/12/python列表添加字典需要注意地方/" data-id="cj4dyna270000aoo02esxvust" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
